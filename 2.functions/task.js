@@ -73,15 +73,12 @@ function averageEvenElementsWorker(...arr) {
     } 
   }
   
-  let averageEvenElements = sumEvenElement / countEvenElement;
-
-  return averageEvenElements;
+  return sumEvenElement / countEvenElement;
 }
 
 function makeWork (arrOfArr, func) {
-  maxWorkerResult = -Infinity;
+  let maxWorkerResult = -Infinity;
   for (let i = 0; i < arrOfArr.length; i++) {
-    func(...arrOfArr[i]);
     const result = func(...arrOfArr[i]);
     if (result > maxWorkerResult) {
       maxWorkerResult = result;
